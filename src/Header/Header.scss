@@ -1,0 +1,111 @@
+@import '../variables.scss';
+
+.header-bg {
+    background: url(../img/Background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header-menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 0 auto;
+
+        .burger-menu {
+            display: none;
+
+            .btn-body {
+                margin-top: 30px;
+                width: 100px;
+                display: block;
+                position: relative;
+                left: 45px;
+
+                .menu-btn {
+                    display: flex;
+
+                    p {
+                        border: none;
+                        color: $light-color;
+                        font: 500 16px/23px Roboto;
+                    }
+
+                    a {
+                        font: 600 $medium-size Open Sans, sans-serif;
+                        color: $light-color;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            ul {
+                margin-top: 20px;
+                margin-left: 20px;
+                flex-direction: column;
+                transform: translate(-100%);
+            }
+        }
+    }
+
+    .header-scroll {
+        flex: 0 0 auto;
+
+        p {
+            color: $light-color;
+            text-transform: uppercase;
+            font: 300 $small-size Montserrat;
+            letter-spacing: 4px;
+        }
+    }
+}
+
+
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 600px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    transition: 330ms ease;
+
+    li {
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+.open {
+    transform: translate(0) !important;
+}
+
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+        transform: translate(0, -20px) rotate(45deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0, 20px) rotate(45deg);
+    }
+}
